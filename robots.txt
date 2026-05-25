@@ -1,4 +1,5 @@
-# Тестовий домен — забороняємо індексацію.
-# Основний сайт готелю буде на іншому домені.
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://hotel.apollonia.ua/sitemap.xml
