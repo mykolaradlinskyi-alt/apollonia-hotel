@@ -308,6 +308,44 @@
     .review-strip .container{gap:12px}
     .review-strip-label,.review-strip-note{display:none}
   }
+
+  /* ============ WELCOME ============ */
+  .welcome{background:var(--cream);padding:80px 0 70px}
+  @media (max-width:640px){.welcome{padding:60px 0 50px}}
+  .welcome-wrap{max-width:760px;margin:0 auto}
+  .welcome h1{
+    font-family:'Cormorant Garamond',serif;font-weight:400;
+    font-size:48px;line-height:1.15;color:var(--walnut);
+    letter-spacing:-.02em;margin-top:6px;
+  }
+  .welcome h1 em{font-style:italic;color:var(--saffron-deep)}
+  @media (max-width:640px){.welcome h1{font-size:34px}}
+  .welcome-lede{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:24px;line-height:1.45;color:var(--saffron-deep);
+    margin:28px 0 18px;
+  }
+  .welcome p{font-size:17px;line-height:1.75;color:var(--walnut);margin-bottom:18px}
+  .welcome-services-lead{
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);font-weight:500;margin-top:32px;margin-bottom:14px;
+  }
+  .welcome-list{list-style:none;margin:0;padding:0}
+  .welcome-list li{
+    font-size:17px;line-height:1.6;color:var(--walnut);
+    padding:10px 0 10px 28px;position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .welcome-list li:last-child{border-bottom:none}
+  .welcome-list li::before{
+    content:"";position:absolute;left:0;top:18px;
+    width:14px;height:1px;background:var(--saffron-deep);
+  }
+  .welcome-outro{
+    margin-top:30px;font-family:'Cormorant Garamond',serif;font-style:italic;
+    font-size:22px;line-height:1.5;color:var(--walnut);
+    padding-top:24px;border-top:1px solid var(--line);
+  }
 </style>
 </head>
 <body>
@@ -340,13 +378,35 @@
 <div class="review-strip">
   <div class="container">
     <span class="review-strip-label">Гості нас оцінили</span>
-    <a class="booking-badge" href="https://www.booking.com/hotel/ua/apollonia-poltava.html" target="_blank" rel="noopener" aria-label="Готель Аполлонія на Booking.com — оцінка 8,9">
+    <a class="booking-badge" href="https://www.booking.com/hotel/ua/apolloniia-poltava.uk.html" target="_blank" rel="noopener" aria-label="Готель Аполлонія на Booking.com — оцінка 8,9">
       <span class="booking-brand"><span class="b-bold">Booking</span>.com</span>
       <span class="booking-score">8,9</span>
     </a>
     <span class="review-strip-note">Дуже добре · реальні відгуки</span>
   </div>
 </div>
+
+<!-- ============ WELCOME ============ -->
+<section class="welcome">
+  <div class="container">
+    <div class="welcome-wrap">
+      <div class="section-head">
+        <div class="label">— Ласкаво просимо</div>
+        <h1>Готель «Аполлонія» — <em>затишно з 2009 року.</em></h1>
+      </div>
+      <p class="welcome-lede">Місце, де комфорт починається з першої хвилини ✨</p>
+      <p>Ми зручно розташовані поруч із трасою Київ–Харків — ідеальний варіант для відпочинку в дорозі, ділової поїздки чи спокійної ночівлі у&nbsp;Полтаві.</p>
+      <p class="welcome-services-lead">До ваших послуг:</p>
+      <ul class="welcome-list">
+        <li>8 затишних та комфортних номерів</li>
+        <li>Бездоганна чистота та турбота про кожного гостя</li>
+        <li>Тиша, комфорт і приємна атмосфера</li>
+        <li>Доступні ціни без компромісів у якості</li>
+      </ul>
+      <p class="welcome-outro">Готель «Аполлонія» — місце, куди хочеться повернутися після довгої дороги.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ============ ROOMS ============ -->
 <section class="rooms" id="rooms">
