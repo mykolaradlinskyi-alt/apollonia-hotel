@@ -244,6 +244,10 @@
   .map-link:hover{color:var(--saffron-deep)}
   .practical-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   @media (max-width:760px){.practical-grid{grid-template-columns:1fr;gap:18px}}
+  .practical-contact{margin-top:50px;max-width:640px}
+  .practical-contact .booking-info-row{color:var(--walnut);border-bottom:1px solid var(--line)}
+  .practical-contact .booking-info-row:last-child{border-bottom:none}
+  .practical-contact .booking-info-row .v{color:var(--saffron-deep)}
   .prac-item{background:var(--ivory);border:1px solid var(--line);overflow:hidden}
   .prac-item img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
   .prac-item figcaption{
@@ -284,10 +288,9 @@
         </div>
       </a>
       <nav>
-        <a href="#about">Готель</a>
         <a href="#rooms">Номери</a>
+        <a href="#gallery">Атмосфера</a>
         <a href="#conditions">Умови</a>
-        <a href="#booking">Бронювання</a>
         <a href="#contact">Контакти</a>
       </nav>
       <div class="topbar-right">
@@ -296,36 +299,6 @@
     </div>
   </div>
 </header>
-
-<!-- ============ ABOUT ============ -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <div class="section-head" style="margin-bottom:0">
-          <div class="label">Про готель</div>
-          <h2>Затишно. Знайомо. <em>З 2009 року.</em></h2>
-        </div>
-        <p style="margin-top:30px">Готель «Аполлонія» було створено для пацієнтів стоматологічної клініки-студії та лікарів, які приїжджали на навчальні курси. Поступово ми відкрилися й для гостей міста — мандрівників між Києвом і Харковом, відвідувачів і всіх, хто шукає тихого нічлігу в Полтаві.</p>
-        <p>Формат — B&amp;B. Вісім номерів на другому поверсі будівлі клініки, простий і теплий сервіс, без зайвого, з душею. Все потрібне — є. Зайвого — немає.</p>
-      </div>
-      <div>
-        <div class="about-photo">
-          <img src="assets/img/1a684dfeb9a8.webp" alt="Адміністратор готелю Аполлонія за стійкою рецепції" loading="lazy" decoding="async">
-        </div>
-        <div class="about-list">
-          <div class="about-list-item"><span class="name">Розташування</span><span class="val">Полтава · біля М-03</span></div>
-          <div class="about-list-item"><span class="name">Формат</span><span class="val">B&amp;B · 8 номерів</span></div>
-          <div class="about-list-item"><span class="name">Паркування</span><span class="val">безкоштовно</span></div>
-          <div class="about-list-item"><span class="name">Сніданок</span><span class="val">за бажанням</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- divider -->
-<div class="walnut-divider" aria-hidden="true"></div>
 
 <!-- ============ ROOMS ============ -->
 <section class="rooms" id="rooms">
@@ -367,8 +340,8 @@
         </div>
       </div>
 
-      <!-- SUPERIOR (featured) -->
-      <div class="room-card featured">
+      <!-- SUPERIOR -->
+      <div class="room-card">
         <div class="room-photo">
           <img src="assets/img/08f7c67a7d46.webp" alt="Суперіор у готелі Аполлонія — робоча зона з обладнанням для чаю та кави" loading="lazy" decoding="async">
         </div>
@@ -494,38 +467,6 @@
   </div>
 </section>
 
-<!-- ============ BOOKING ============ -->
-<section class="booking" id="booking">
-  <div class="container">
-    <div class="section-head">
-      <div class="label">— Як забронювати</div>
-      <h2 style="color:var(--cream)">Зателефонуйте. <em style="color:var(--saffron)">Все просто.</em></h2>
-      <p>Бронювання — телефоном або через месенджер. Менеджер уточнить дати, тип номера, додаткові побажання — і підтвердить.</p>
-    </div>
-    <div class="booking-grid">
-      <div>
-        <div class="booking-phone-block">
-          <div class="label">Телефон бронювання</div>
-          <a class="phone" href="tel:+380509330928">+38 (050) 933-09-28</a>
-          <div class="messengers">
-            <span class="chip">Viber</span><span class="dot">·</span>
-            <span class="chip">WhatsApp</span><span class="dot">·</span>
-            <span class="chip">Telegram</span>
-          </div>
-        </div>
-      </div>
-      <div id="contact">
-        <div class="booking-info">
-          <div class="booking-info-row"><span>Адреса</span><span class="v">вул. О. Оксанченка, 29 · Полтава</span></div>
-          <div class="booking-info-row"><span>Заїзд / виїзд</span><span class="v">14:00 / 12:00</span></div>
-          <div class="booking-info-row"><span>Паркування</span><span class="v">безкоштовно</span></div>
-          <div class="booking-info-row"><span>Сніданок</span><span class="v">250 ₴ окремо</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ PRACTICAL / FIND US ============ -->
 <section class="practical">
   <div class="container">
@@ -547,6 +488,14 @@
         <figcaption>Поруч з трасою М-03 · Київ — Харків</figcaption>
       </figure>
     </div>
+    <div id="contact" class="practical-contact">
+      <div class="booking-info">
+        <div class="booking-info-row"><span>Адреса</span><span class="v">вул. О. Оксанченка, 29 · Полтава</span></div>
+        <div class="booking-info-row"><span>Заїзд / виїзд</span><span class="v">14:00 / 12:00</span></div>
+        <div class="booking-info-row"><span>Паркування</span><span class="v">безкоштовно</span></div>
+        <div class="booking-info-row"><span>Сніданок</span><span class="v">250 ₴ окремо</span></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -561,10 +510,10 @@
       </div>
       <div class="foot-col">
         <h5>Готель</h5>
-        <a href="#about">Про готель</a>
         <a href="#rooms">Номери</a>
+        <a href="#gallery">Атмосфера</a>
         <a href="#conditions">Умови</a>
-        <a href="#booking">Бронювання</a>
+        <a href="#contact">Контакти</a>
       </div>
       <div class="foot-col">
         <h5>Правові</h5>
