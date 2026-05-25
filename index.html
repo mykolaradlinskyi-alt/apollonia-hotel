@@ -106,8 +106,8 @@
 
   /* ============ ROOMS ============ */
   .rooms{background:var(--ivory)}
-  .rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;align-items:start}
-  @media (max-width:1000px){.rooms-grid{grid-template-columns:1fr}}
+  .rooms-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;align-items:start}
+  @media (max-width:760px){.rooms-grid{grid-template-columns:1fr}}
   .room-card{
     background:var(--cream);border:1px solid var(--line);
     display:flex;flex-direction:column;transition:transform .3s ease;
@@ -248,6 +248,11 @@
   .practical-contact .booking-info-row{color:var(--walnut);border-bottom:1px solid var(--line)}
   .practical-contact .booking-info-row:last-child{border-bottom:none}
   .practical-contact .booking-info-row .v{color:var(--saffron-deep)}
+  .practical-contact .contact-phone,
+  .practical-contact .contact-viber{color:var(--saffron-deep);text-decoration:none;transition:color .15s}
+  .practical-contact .contact-phone:hover,
+  .practical-contact .contact-viber:hover{color:var(--walnut)}
+  .practical-contact .contact-sep{color:var(--line);margin:0 8px;font-style:normal}
   .prac-item{background:var(--ivory);border:1px solid var(--line);overflow:hidden}
   .prac-item img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
   .prac-item figcaption{
@@ -310,33 +315,55 @@
     </div>
     <div class="rooms-grid">
 
-      <!-- STANDARD -->
+      <!-- STANDARD · TWIN -->
       <div class="room-card">
         <div class="room-photo">
-          <img src="assets/img/d499d62a5890.webp" alt="Стандартний номер у готелі Аполлонія — два односпальних ліжка" loading="lazy" decoding="async">
+          <img src="assets/img/d499d62a5890.webp" alt="Стандартний номер у готелі Аполлонія — два роздільних ліжка" loading="lazy" decoding="async">
         </div>
         <div class="room-body">
-          <div class="room-type">Стандарт · 6 номерів</div>
+          <div class="room-type">Стандарт · 5 номерів</div>
           <h3 class="room-name">Стандарт</h3>
-          <div class="room-subtitle">Усе необхідне для затишного нічлігу</div>
+          <div class="room-subtitle">З двома роздільними ліжками</div>
           <ul class="amenity-list">
-            <li>Кабельне телебачення</li>
-            <li>Телефон, міні-сейф, міні-бар</li>
-            <li>Робоче місце</li>
-            <li>Wi-Fi у номері</li>
-            <li>Індивідуальне опалення та кондиціювання</li>
+            <li>Телебачення + Wi-Fi</li>
+            <li>Комплект рушників та капці</li>
+            <li>Негазована вода 0,5 л</li>
           </ul>
           <div class="price-rows">
             <div class="price-row">
-              <span class="who">1 особа · доба</span>
-              <span class="price">1 200 ₴</span>
+              <span class="who">1 гість · доба</span>
+              <span class="price">1 400 ₴</span>
             </div>
             <div class="price-row">
-              <span class="who">2 особи · доба</span>
-              <span class="price">1 500 ₴</span>
+              <span class="who">2 гості · доба</span>
+              <span class="price">1 700 ₴</span>
             </div>
           </div>
-          <div class="room-footnote">+ готельний збір · сніданок 250 ₴ окремо</div>
+          <div class="room-footnote">+ готельний збір · сніданок 300 ₴ окремо</div>
+        </div>
+      </div>
+
+      <!-- STANDARD · KING-SIZE -->
+      <div class="room-card">
+        <div class="room-photo">
+          <img src="assets/img/d499d62a5890.webp" alt="Стандартний номер у готелі Аполлонія — ліжко king-size" loading="lazy" decoding="async">
+        </div>
+        <div class="room-body">
+          <div class="room-type">Стандарт · 1 номер</div>
+          <h3 class="room-name">Стандарт King-size</h3>
+          <div class="room-subtitle">З двоспальним ліжком king-size</div>
+          <ul class="amenity-list">
+            <li>Телебачення + Wi-Fi</li>
+            <li>Комплект рушників та капці</li>
+            <li>Негазована вода 0,5 л</li>
+          </ul>
+          <div class="price-rows">
+            <div class="price-row">
+              <span class="who">1–2 гості · доба</span>
+              <span class="price">1 700 ₴</span>
+            </div>
+          </div>
+          <div class="room-footnote">+ готельний збір · сніданок 300 ₴ окремо</div>
         </div>
       </div>
 
@@ -352,19 +379,16 @@
           <ul class="amenity-list">
             <li>Усе зі стандартного номера</li>
             <li>Устаткування для приготування чаю та кави</li>
+            <li>Халати</li>
           </ul>
-          <div class="room-amenity-bonus">Комплімент від готелю — чай, кава, печиво, вода 0,5 л</div>
+          <div class="room-amenity-bonus">Комплімент від готелю — чай, кава</div>
           <div class="price-rows">
             <div class="price-row">
-              <span class="who">1 особа · доба</span>
-              <span class="price">1 400 ₴</span>
-            </div>
-            <div class="price-row">
-              <span class="who">2 особи · доба</span>
-              <span class="price">1 800 ₴</span>
+              <span class="who">1–2 гості · доба</span>
+              <span class="price">2 000 ₴</span>
             </div>
           </div>
-          <div class="room-footnote">+ готельний збір · сніданок 250 ₴ окремо</div>
+          <div class="room-footnote">+ готельний збір · сніданок 300 ₴ окремо</div>
         </div>
       </div>
 
@@ -379,23 +403,30 @@
           <div class="room-subtitle">Двокімнатний — для сім'ї або тривалого перебування</div>
           <ul class="amenity-list">
             <li>1 двоспальне ліжко</li>
-            <li>Можливість додати спальне місце</li>
+            <li>Можливість додати два спальних місця</li>
             <li>Усе зі стандартного номера</li>
             <li>Устаткування для чаю та кави</li>
           </ul>
-          <div class="room-amenity-bonus">Комплімент від готелю — чай, кава, печиво, вода 0,5 л</div>
+          <div class="room-amenity-bonus">Комплімент від готелю — чай, кава</div>
           <div class="price-rows">
             <div class="price-row">
-              <span class="who">1 особа · доба</span>
-              <span class="price">1 600 ₴</span>
-            </div>
-            <div class="price-row">
-              <span class="who">2 особи · доба</span>
+              <span class="who">1 гість · доба</span>
               <span class="price">2 400 ₴</span>
             </div>
-            <div class="price-extra">Додаткове спальне місце — 400 ₴</div>
+            <div class="price-row">
+              <span class="who">2 гості · доба</span>
+              <span class="price">2 700 ₴</span>
+            </div>
+            <div class="price-row">
+              <span class="who">3 гості · доба</span>
+              <span class="price">3 000 ₴</span>
+            </div>
+            <div class="price-row">
+              <span class="who">4 гості · доба</span>
+              <span class="price">3 300 ₴</span>
+            </div>
           </div>
-          <div class="room-footnote">+ готельний збір · сніданок 250 ₴ окремо</div>
+          <div class="room-footnote">+ готельний збір · сніданок 300 ₴ окремо</div>
         </div>
       </div>
 
@@ -433,7 +464,7 @@
     <div class="cond-grid">
       <div class="cond-block">
         <div class="ckey">Заїзд</div>
-        <div class="cval"><em>14:00</em></div>
+        <div class="cval"><em>15:00</em></div>
         <div class="cnote">За місцевим часом</div>
       </div>
       <div class="cond-block">
@@ -443,7 +474,7 @@
       </div>
       <div class="cond-block">
         <div class="ckey">Сніданок</div>
-        <div class="cval"><em>250 ₴</em></div>
+        <div class="cval"><em>300 ₴</em></div>
         <div class="cnote">Окремо · за бажанням</div>
       </div>
       <div class="cond-block">
@@ -456,8 +487,8 @@
     <div class="cond-finerules">
       <h4>Якщо ваш графік відрізняється від стандартного</h4>
       <ul>
-        <li>Ранній заїзд до 6 годин до 14:00 — плата за половину доби</li>
-        <li>Ранній заїзд від 6 до 24 годин до 14:00 — плата за повну добу</li>
+        <li>Ранній заїзд до 6 годин до 15:00 — плата за половину доби</li>
+        <li>Ранній заїзд від 6 до 24 годин до 15:00 — плата за повну добу</li>
         <li>Пізній виїзд до 6 годин після 12:00 — плата за половину доби</li>
         <li>Пізній виїзд від 6 до 24 годин після 12:00 — плата за повну добу</li>
         <li>Картка гостя є перепусткою до готелю</li>
@@ -490,10 +521,18 @@
     </div>
     <div id="contact" class="practical-contact">
       <div class="booking-info">
+        <div class="booking-info-row">
+          <span>Телефон</span>
+          <span class="v">
+            <a href="tel:+380509330928" class="contact-phone">+38 (050) 933-09-28</a>
+            <span class="contact-sep">·</span>
+            <a href="viber://chat?number=%2B380509330928" class="contact-viber" aria-label="Написати у Viber">Viber</a>
+          </span>
+        </div>
         <div class="booking-info-row"><span>Адреса</span><span class="v">вул. О. Оксанченка, 29 · Полтава</span></div>
-        <div class="booking-info-row"><span>Заїзд / виїзд</span><span class="v">14:00 / 12:00</span></div>
+        <div class="booking-info-row"><span>Заїзд / виїзд</span><span class="v">15:00 / 12:00</span></div>
         <div class="booking-info-row"><span>Паркування</span><span class="v">безкоштовно</span></div>
-        <div class="booking-info-row"><span>Сніданок</span><span class="v">250 ₴ окремо</span></div>
+        <div class="booking-info-row"><span>Сніданок</span><span class="v">300 ₴ окремо</span></div>
       </div>
     </div>
   </div>
