@@ -277,6 +277,37 @@
     font-size:12px;color:rgba(250,245,232,.45);flex-wrap:wrap;gap:14px;
   }
   .foot-legal{font-size:11px;line-height:1.6;color:rgba(250,245,232,.35);max-width:780px;margin-top:20px}
+
+  /* ============ REVIEW STRIP ============ */
+  .review-strip{background:var(--ivory);border-bottom:1px solid var(--line);padding:16px 0}
+  .review-strip .container{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap}
+  .review-strip-label{
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--muted);font-weight:500;
+  }
+  .review-strip-note{
+    font-size:13px;color:var(--muted);font-style:italic;
+  }
+  .booking-badge{
+    display:inline-flex;align-items:center;gap:10px;
+    background:#003b95;color:#fff;text-decoration:none;
+    padding:8px 10px 8px 14px;border-radius:8px;
+    font-family:Arial,Helvetica,sans-serif;font-size:16px;
+    line-height:1;letter-spacing:-.01em;
+    transition:transform .15s,box-shadow .15s;
+    box-shadow:0 2px 6px rgba(0,59,149,.25);
+  }
+  .booking-badge:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(0,59,149,.35)}
+  .booking-brand{padding:2px 0}
+  .booking-brand .b-bold{font-weight:700}
+  .booking-score{
+    background:#0071c2;color:#fff;font-weight:700;
+    padding:6px 10px;border-radius:6px;font-size:16px;
+  }
+  @media (max-width:560px){
+    .review-strip .container{gap:12px}
+    .review-strip-label,.review-strip-note{display:none}
+  }
 </style>
 </head>
 <body>
@@ -304,6 +335,18 @@
     </div>
   </div>
 </header>
+
+<!-- ============ REVIEW STRIP ============ -->
+<div class="review-strip">
+  <div class="container">
+    <span class="review-strip-label">Гості нас оцінили</span>
+    <a class="booking-badge" href="https://www.booking.com/hotel/ua/apollonia-poltava.html" target="_blank" rel="noopener" aria-label="Готель Аполлонія на Booking.com — оцінка 8,9">
+      <span class="booking-brand"><span class="b-bold">Booking</span>.com</span>
+      <span class="booking-score">8,9</span>
+    </a>
+    <span class="review-strip-note">Дуже добре · реальні відгуки</span>
+  </div>
+</div>
 
 <!-- ============ ROOMS ============ -->
 <section class="rooms" id="rooms">
@@ -370,7 +413,7 @@
       <!-- SUPERIOR -->
       <div class="room-card">
         <div class="room-photo">
-          <img src="assets/img/08f7c67a7d46.webp" alt="Суперіор у готелі Аполлонія — робоча зона з обладнанням для чаю та кави" loading="lazy" decoding="async">
+          <img src="assets/img/08f7c67a7d46.webp" alt="Суперіор у готелі Аполлонія — номер з балконом та зоною для чаю і кави" loading="lazy" decoding="async">
         </div>
         <div class="room-body">
           <div class="room-type">Суперіор · 1 номер</div>
