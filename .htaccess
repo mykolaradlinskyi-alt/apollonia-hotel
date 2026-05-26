@@ -10,9 +10,15 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Дозволити /.well-known/ для ACME-challenge (Let's Encrypt validation)
+  RewriteCond %{REQUEST_URI} ^/\.well-known/ [NC]
+  RewriteRule .* - [L]
+
+  # Якщо запит прийшов по HTTP — редирект на HTTPS
   RewriteCond %{HTTPS} !=on
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
+  # www.hotel.apollonia.ua → hotel.apollonia.ua
   RewriteCond %{HTTP_HOST} ^www\.hotel\.apollonia\.ua$ [NC]
   RewriteRule ^(.*)$ https://hotel.apollonia.ua/$1 [R=301,L]
 </IfModule>
