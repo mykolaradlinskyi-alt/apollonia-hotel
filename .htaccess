@@ -41,7 +41,7 @@ Options -Indexes
 
 # ============ БЕЗПЕКА ============
 <IfModule mod_headers.c>
-  Header always set Strict-Transport-Security "max-age=2592000; includeSubDomains" env=HTTPS
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
